@@ -5,11 +5,11 @@ import startegyDesignPatternPaymentSystem.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoppingCard {
+public class ShoppingCart {
 
     List<Product> productList;
 
-    public ShoppingCard() {
+    public ShoppingCart() {
         this.productList = new ArrayList<>();
     }
 
@@ -29,7 +29,8 @@ public class ShoppingCard {
         return sum;
     }
 
-    public void pay() {
+    public void pay(Payment paymentStrategy) {
         int amount = calculateTotal();
+        paymentStrategy.pay(amount);
     }
 }
