@@ -8,7 +8,6 @@ import java.util.List;
 public class ShoppingCart {
 
     List<Product> productList;
-
     public ShoppingCart() {
         this.productList = new ArrayList<>();
     }

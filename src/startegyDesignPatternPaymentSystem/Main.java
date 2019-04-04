@@ -17,7 +17,7 @@ public class Main {
         cart.addProduct(pants);
         cart.addProduct(shirt);
 
-        // Payment decision
+        // Payment decisions
         cart.pay(new PayPalAlgorithm("p@p.com", "qwerty"));
 
         cart.pay(new CreditCardAlgorithm("Paolo", "9896943"));
