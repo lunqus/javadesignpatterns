@@ -1,0 +1,47 @@
+package observerDesignPattern.model;
+
+import observerDesignPattern.interfaces.Observer;
+import observerDesignPattern.interfaces.Subject;
+
+import java.util.List;
+
+public class EmailTopic implements Subject {
+
+    private List<Observer> observers;
+    private String message;
+
+    public EmailTopic(List<Observer> observers) {
+        this.observers = observers;
+    }
+
+    @Override
+    public void register(Observer observer) {
+        if(observer == null) throw new NullPointerException("Null Object/Observer");
+
+        if(!observers.contains(observer))
+            observers.add(observer);
+    }
+
+    @Override
+    public void unregister(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
+
+    @Override
+    public Object getUpdate(Observer observer) {
+        return this.message;
+    }
+
+    public void postMessage(String msg) {
+        System.out.println("Message posted to my topic : " + msg);
+        this.message = msg;
+        notifyObservers();
+    }
+}
