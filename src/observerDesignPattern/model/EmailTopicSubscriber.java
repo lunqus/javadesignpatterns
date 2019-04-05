@@ -17,7 +17,7 @@ public class EmailTopicSubscriber implements Observer {
     public void update() {
         String msg = (String) topic.getUpdate(this);
         if (msg == null)
-            System.out.println(name + " Now new message on this topic!");
+            System.out.println(name + " No new message on this topic!");
         else
             System.out.println(name + " Retrieving message: " + msg);
     }

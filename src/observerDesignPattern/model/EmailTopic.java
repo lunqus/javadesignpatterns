@@ -3,6 +3,7 @@ package observerDesignPattern.model;
 import observerDesignPattern.interfaces.Observer;
 import observerDesignPattern.interfaces.Subject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EmailTopic implements Subject {
@@ -10,8 +11,8 @@ public class EmailTopic implements Subject {
     private List<Observer> observers;
     private String message;
 
-    public EmailTopic(List<Observer> observers) {
-        this.observers = observers;
+    public EmailTopic() {
+        this.observers = new ArrayList<>();
     }
 
     @Override
