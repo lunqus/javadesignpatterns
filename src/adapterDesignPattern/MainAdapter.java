@@ -1,6 +1,6 @@
 package adapterDesignPattern;
 
-import adapterDesignPattern.interfaces.iSocketAdapter;
+import adapterDesignPattern.interfaces.SocketAdapter;
 import adapterDesignPattern.model.Socket;
 import adapterDesignPattern.model.SocketAdapterImplementation;
 import adapterDesignPattern.model.SocketObjectAdapterImplementation;
@@ -26,7 +26,7 @@ public class MainAdapter {
     }
 
     private static void testingClassAdapter() {
-        iSocketAdapter socketAdapter = new SocketAdapterImplementation();
+        SocketAdapter socketAdapter = new SocketAdapterImplementation();
         Volt v1 = getVolt(socketAdapter, 1);
         Volt v3 = getVolt(socketAdapter, 3);
         Volt v12 = getVolt(socketAdapter, 12);
@@ -39,7 +39,7 @@ public class MainAdapter {
     }
 
     private static void testingObjectAdapter() {
-        iSocketAdapter socketAdapter = new SocketObjectAdapterImplementation();
+        SocketAdapter socketAdapter = new SocketObjectAdapterImplementation();
         Volt v1 = getVolt(socketAdapter, 1);
         Volt v3 = getVolt(socketAdapter, 3);
         Volt v12 = getVolt(socketAdapter, 12);
@@ -51,7 +51,7 @@ public class MainAdapter {
         System.out.println("V120 volts is using Object Adapter " + v120.getVolts());
     }
 
-    private static Volt getVolt(iSocketAdapter socketAdapter, int i) {
+    private static Volt getVolt(SocketAdapter socketAdapter, int i) {
         switch (i) {
             case 1: return socketAdapter.get1Volt();
             case 3: return socketAdapter.get3Volts();

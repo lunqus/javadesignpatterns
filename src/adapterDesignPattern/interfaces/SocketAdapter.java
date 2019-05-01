@@ -2,7 +2,7 @@ package adapterDesignPattern.interfaces;
 
 import adapterDesignPattern.model.Volt;
 
-public interface iSocketAdapter {
+public interface SocketAdapter {
 
     // public Volt get220Volts();
 

@@ -1,8 +1,8 @@
 package adapterDesignPattern.model;
 
-import adapterDesignPattern.interfaces.iSocketAdapter;
+import adapterDesignPattern.interfaces.SocketAdapter;
 
-public class SocketObjectAdapterImplementation implements iSocketAdapter {
+public class SocketObjectAdapterImplementation implements SocketAdapter {
 
     // Using composition for adapter pattern
     private Socket socket = new Socket();

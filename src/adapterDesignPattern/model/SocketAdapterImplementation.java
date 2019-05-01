@@ -1,9 +1,9 @@
 package adapterDesignPattern.model;
 
-import adapterDesignPattern.interfaces.iSocketAdapter;
+import adapterDesignPattern.interfaces.SocketAdapter;
 
 // Class adapter
-public class SocketAdapterImplementation extends Socket implements iSocketAdapter {
+public class SocketAdapterImplementation extends Socket implements SocketAdapter {
 
     @Override
     public Volt get120Volts() {
