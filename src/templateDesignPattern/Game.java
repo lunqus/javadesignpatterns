@@ -8,8 +8,24 @@ public abstract class Game {
 
     // Template method
     public final void play() {
+        loadAssets();
         initialize();
         startPlay();
+        if(addNewGameCharacter()) {
+            addCharacterTotheGame();
+        }
         endPlay();
     }
+
+    // Hooked on Template Method
+    protected abstract void addCharacterTotheGame();
+
+    void loadAssets() {
+        System.out.println("Loadig Game Assets!");
+    }
+
+    boolean addNewGameCharacter() {
+        return true;
+    }
+
 }

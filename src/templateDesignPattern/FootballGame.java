@@ -15,4 +15,9 @@ public class FootballGame extends Game {
     void endPlay() {
         System.out.println("Football Game ending ...");
     }
+
+    @Override
+    protected void addCharacterTotheGame() {
+
+    }
 }
