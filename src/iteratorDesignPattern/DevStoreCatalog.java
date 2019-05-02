@@ -1,4 +1,6 @@
-package iteratorDesignPatternObviousSolution;
+package iteratorDesignPattern;
+
+import iteratorDesignPattern.models.DevStoreIterator;
 
 public class DevStoreCatalog {
     private static final int MAX_ITEMS = 4;
@@ -26,7 +28,11 @@ public class DevStoreCatalog {
         }
     }
 
-    public Product[] getCatalog() {
-        return catalog;
+//    public Product[] getCatalog() {
+//        return catalog;
+//    }
+
+    public DevStoreIterator createIterator() {
+        return new DevStoreIterator(catalog);
     }
 }

@@ -1,4 +1,6 @@
-package iteratorDesignPatternObviousSolution;
+package iteratorDesignPattern;
+
+import iteratorDesignPattern.models.GeekyStoreIterator;
 
 import java.util.ArrayList;
 
@@ -21,5 +23,9 @@ public class GeekyStoreCatalog {
 
     public ArrayList<Product> getCatalog() {
         return catalog;
+    }
+
+    public GeekyStoreIterator createIterator() {
+        return new GeekyStoreIterator(catalog);
     }
 }

@@ -1,4 +1,4 @@
-package iteratorDesignPatternObviousSolution;
+package iteratorDesignPattern;
 
 public class Product {
     private String name;
