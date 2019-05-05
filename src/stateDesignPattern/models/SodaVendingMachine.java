@@ -11,7 +11,7 @@ public class SodaVendingMachine {
 
     public SodaVendingMachine(int numberOfSodas) {
         soldOutState = new SoldOutState(this);
-        noMoneyState = new HasMoneyState(this);
+        noMoneyState = new NoMoneyState(this);
         hasMoneyState = new HasMoneyState(this);
         soldState = new SoldState(this);
 
@@ -85,5 +85,19 @@ public class SodaVendingMachine {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("\nThe Soda Machine, Co");
+        result.append("\nInventory: " + count + " soda");
+        if (count != 1) {
+            result.append("s");
+        }
+        result.append("\n");
+        result.append("Soda Vending Machine is " + state + "\n");
+
+        return result.toString();
     }
 }
