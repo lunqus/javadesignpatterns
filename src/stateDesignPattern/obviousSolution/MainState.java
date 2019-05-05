@@ -1,4 +1,4 @@
-package stateDesignPattern;
+package stateDesignPattern.obviousSolution;
 
 public class MainState {
 
