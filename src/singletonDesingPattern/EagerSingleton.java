@@ -5,7 +5,7 @@ public class EagerSingleton {
     // Eagerly creating Singleton class
     private static EagerSingleton uniqueEagerInstance = new EagerSingleton();
 
-    public EagerSingleton() {
+    private EagerSingleton() {
     }
 
     public static EagerSingleton getInstance() {

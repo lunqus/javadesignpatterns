@@ -2,7 +2,8 @@ package singletonDesingPattern;
 
 public class MySingleton {
 
-    private static MySingleton uniqueInstance = new MySingleton();
+    // Lazily creating Singleton class
+    private static MySingleton uniqueInstance;
 
     String name;
 

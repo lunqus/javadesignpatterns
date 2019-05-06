@@ -4,10 +4,10 @@ public class DoubleCheckLockingSingleton {
 
     private volatile static DoubleCheckLockingSingleton uniqueDCLInstance;
 
-    public DoubleCheckLockingSingleton() {
+    private DoubleCheckLockingSingleton() {
     }
 
-    // Double-Check Locking
+    // Double-Check locking
     public static DoubleCheckLockingSingleton getInstance() {
         if(uniqueDCLInstance == null) {
             synchronized ((DoubleCheckLockingSingleton.class)) {
